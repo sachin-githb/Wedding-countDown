@@ -1,0 +1,384 @@
+/* Sachin Weds Neha — romantic luxury theme */
+:root {
+  --cream: #fff9ef;
+  --champagne: #e7c98c;
+  --gold: #c6a363;
+  --deep-gold: #8c6a35;
+  --ink: #34291f;
+  --glass: rgba(38, 29, 23, 0.28);
+  --glass-border: rgba(255, 239, 205, 0.52);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--cream);
+  background: #5a4536;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.background-photo,
+.photo-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.background-photo {
+  z-index: -2;
+  background-image: url("images/photo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #77614a;
+}
+
+.photo-overlay {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(23, 18, 15, 0.40) 0%, rgba(23, 18, 15, 0.28) 42%, rgba(23, 18, 15, 0.64) 100%),
+    radial-gradient(ellipse at center, rgba(48, 34, 22, 0.05), rgba(20, 15, 12, 0.35));
+}
+
+.topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px clamp(18px, 5vw, 68px);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.brand-monogram {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brand-monogram span {
+  color: var(--champagne);
+  font-size: 0.9em;
+}
+
+.brand-caption {
+  color: var(--champagne);
+  font-size: 0.58rem;
+  letter-spacing: 0.19em;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.control-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 242, 214, 0.68);
+  border-radius: 999px;
+  color: var(--cream);
+  background: rgba(39, 29, 22, 0.34);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font: 500 0.72rem "Montserrat", sans-serif;
+  letter-spacing: 0.035em;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.control-button:hover {
+  background: rgba(198, 163, 99, 0.28);
+  border-color: var(--champagne);
+  transform: translateY(-1px);
+}
+
+.control-button:focus-visible {
+  outline: 2px solid var(--champagne);
+  outline-offset: 3px;
+}
+
+.hero {
+  width: min(100% - 32px, 1000px);
+  margin: auto;
+  padding: 38px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  color: var(--champagne);
+  font-size: clamp(0.56rem, 1.5vw, 0.72rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+}
+
+.eyebrow span {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h1 {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.8rem, 10vw, 7.6rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.18);
+}
+
+.ampersand {
+  color: var(--champagne);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 23px 0 15px;
+}
+
+.ornament > span:not(.ornament-heart) {
+  width: clamp(35px, 8vw, 72px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--champagne));
+}
+
+.ornament > span:last-child {
+  transform: rotate(180deg);
+}
+
+.ornament-heart {
+  color: var(--champagne);
+  font-size: 0.9rem;
+}
+
+.intro {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 249, 239, 0.92);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-style: italic;
+}
+
+.date-label {
+  margin: 34px 0 6px;
+  color: var(--champagne);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+}
+
+.wedding-date {
+  margin: 0;
+  color: var(--cream);
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
+
+.wedding-date span {
+  padding: 0 5px;
+  color: var(--champagne);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1.8vw, 18px);
+  width: 100%;
+  margin-top: 29px;
+}
+
+.time-card {
+  width: clamp(68px, 15vw, 130px);
+  min-height: clamp(82px, 13vw, 112px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 6px;
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  background: var(--glass);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.time-number {
+  color: var(--cream);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.time-label {
+  color: var(--champagne);
+  font-size: clamp(0.48rem, 1.4vw, 0.63rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.time-separator {
+  color: var(--champagne);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  transform: translateY(-6px);
+}
+
+.message {
+  min-height: 1.6em;
+  margin: 24px 0 0;
+  color: var(--cream);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 3.5vw, 2rem);
+  font-style: italic;
+}
+
+.bottom-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 30px;
+  color: var(--champagne);
+  font-size: 0.56rem;
+  letter-spacing: 0.23em;
+}
+
+.note-line {
+  width: 28px;
+  height: 1px;
+  background: rgba(231, 201, 140, 0.72);
+}
+
+.note-heart {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    align-items: flex-start;
+    padding: 18px 16px;
+  }
+
+  .brand-caption {
+    max-width: 130px;
+    line-height: 1.5;
+  }
+
+  .controls {
+    gap: 7px;
+  }
+
+  .control-button {
+    min-height: 38px;
+    padding: 9px 11px;
+    font-size: 0.65rem;
+  }
+
+  .hero {
+    width: calc(100% - 24px);
+    padding: 30px 0 34px;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.13em;
+    gap: 7px;
+  }
+
+  .eyebrow span {
+    width: 14px;
+  }
+
+  .date-label {
+    margin-top: 27px;
+  }
+
+  .countdown {
+    gap: 5px;
+    margin-top: 24px;
+  }
+
+  .time-card {
+    width: calc((100vw - 62px) / 4);
+    min-height: 78px;
+    gap: 7px;
+    padding: 10px 2px;
+  }
+
+  .time-number {
+    font-size: clamp(1.7rem, 8vw, 2.5rem);
+  }
+
+  .time-label {
+    letter-spacing: 0.08em;
+  }
+
+  .time-separator {
+    font-size: 1.25rem;
+  }
+
+  .bottom-note {
+    margin-top: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
