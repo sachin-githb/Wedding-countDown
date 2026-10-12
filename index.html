@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f7f0e4">
+  <title>Sachin Weds Neha | Our Forever Begins</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="background-photo" id="background-photo" aria-hidden="true"></div>
+  <div class="photo-overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Sachin and Neha wedding countdown">
+      <span class="brand-monogram">S <span>♥</span> N</span>
+      <span class="brand-caption">OUR WEDDING COUNTDOWN</span>
+    </a>
+
+    <div class="controls" aria-label="Website controls">
+      <button id="toggle-btn" class="control-button" type="button" aria-label="Change background photo">
+        <span aria-hidden="true">◈</span> Change Photo
+      </button>
+      <button id="music-btn" class="control-button music-button" type="button" aria-pressed="false">
+        <span id="music-icon" aria-hidden="true">♫</span>
+        <span id="music-label">Play Music</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <p class="eyebrow"><span></span> TWO HEARTS, ONE BEAUTIFUL JOURNEY <span></span></p>
+
+    <h1>Sachin <span class="ampersand">&amp;</span> Neha</h1>
+
+    <div class="ornament" aria-hidden="true">
+      <span></span><span class="ornament-heart">♥</span><span></span>
+    </div>
+
+    <p class="intro">Together with love, we're counting down to our forever.</p>
+
+    <p class="date-label">SAVE THE DATE</p>
+    <p class="wedding-date">29 <span>·</span> JANUARY <span>·</span> 2027</p>
+
+    <section id="countdown" class="countdown" aria-label="Time remaining until the wedding">
+      <div class="time-card">
+        <span class="time-number" id="days">000</span>
+        <span class="time-label">DAYS</span>
+      </div>
+      <span class="time-separator" aria-hidden="true">:</span>
+      <div class="time-card">
+        <span class="time-number" id="hours">00</span>
+        <span class="time-label">HOURS</span>
+      </div>
+      <span class="time-separator" aria-hidden="true">:</span>
+      <div class="time-card">
+        <span class="time-number" id="minutes">00</span>
+        <span class="time-label">MINUTES</span>
+      </div>
+      <span class="time-separator" aria-hidden="true">:</span>
+      <div class="time-card">
+        <span class="time-number" id="seconds">00</span>
+        <span class="time-label">SECONDS</span>
+      </div>
+    </section>
+
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+
+    <div class="bottom-note">
+      <span class="note-line"></span>
+      <span>MADE WITH LOVE</span>
+      <span class="note-heart">♥</span>
+      <span class="note-line"></span>
+    </div>
+  </main>
+
+  <!-- Add your own licensed/royalty-free music file at audio/romantic-song.mp3.
+       Browsers require a user click before music can start. -->
+       <video id="wedding-music" preload="none" loop playsinline>
+        <source src="audio/romantic-song.mp4" type="video/mp4">
+      </video>
+      
+
+  <script src="script.js"></script>
+</body>
+</html>
